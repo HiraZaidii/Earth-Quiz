@@ -15,6 +15,7 @@ body {
 /*style for the header */
 header>h1 {
     font-size: 6.2rem;
+    padding-top: 5rem;
 }
 
 /* style for the main section */
@@ -22,6 +23,7 @@ header>h1 {
 h1 {
     font-size: 5.4rem;
     margin-bottom: 5rem;
+    text-align: center;
 }
 
 
@@ -63,6 +65,11 @@ h2 {
     display: none;
 }
 
+/* style for the buttons*/
+a {
+    color: black;
+}
+
 .btn {
     font-size: 2.4rem;
     padding: 2rem 0;
@@ -71,8 +78,30 @@ h2 {
     margin-bottom: 1rem;
     text-decoration: none;
     background: linear-gradient(90deg, #E8CD77 0%, #E8CD77 100%);
+    border-radius: 4px;
 }
 
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #fff;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+#highscore-btn {
+    background: linear-gradient(90deg, #FFD588 0%, #FFD588 100%);
+}
+
+#highscore-btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 #fff;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.fa-crown {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+}
 
 /* style for footer */
 .social-networks {
