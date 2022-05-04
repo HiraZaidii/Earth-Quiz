@@ -4,5 +4,30 @@
 }
 
 body {
-    color: #B6C173;
+    background-color: #B6C173;
+}
+
+h1 {
+    text-align: center;
+    font-size: 250%;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+/* style for footer */
+.social-networks {
+    text-align: center;
+}
+
+.social-networks>li {
+    display: inline;
+    text-align: center;
+
+}
+
+.social-networks i {
+    font-size: 160%;
+    color: black;
+    padding: 9px;
+    align-items: center;
 }
