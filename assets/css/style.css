@@ -12,24 +12,21 @@ body {
     font-family: 'Raleway';
 }
 
+/* below contains all the styling for the main html page */
 /*style for the header */
-header>h1 {
-    font-size: 6.2rem;
-    padding-top: 5rem;
-}
 
 /* style for the main section */
 
 h1 {
     font-size: 5.4rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
     text-align: center;
 }
 
 
 h2 {
     font-size: 4.2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .container {
@@ -104,8 +101,21 @@ a {
 }
 
 /* style for footer */
+
+footer {
+    background-color: #89B376;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
 .social-networks {
     text-align: center;
+
 }
 
 .social-networks>li {
@@ -115,8 +125,90 @@ a {
 }
 
 .social-networks i {
-    font-size: 160%;
+    font-size: 4.5rem;
     color: black;
     padding: 9px;
     align-items: center;
+    padding-bottom: 0;
+}
+
+/* below is the styling for the game.html page */
+
+.game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #E8CD77;
+    font-size: 6rem;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 4rem;
+    min-width: 80rem;
+    background: #89B376;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 slategray;
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    font-size: larger;
+
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: linear-gradient(32deg, green 0%, darkgreen 100%);
+}
+
+.incorrect {
+    background: linear-gradient(32deg, red 0%, maroon 100%);
+}
+
+/* heads up display */
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid #89B376;
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarfull {
+    height: 100%;
+    background: #89B376;
+    width: 0%;
 }
