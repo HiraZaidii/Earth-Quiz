@@ -4,14 +4,14 @@ const ProgressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarfull = document.querySelector('#progressBarfull');
 
-let currentQuestion = {}
-let acceptingAnswers = true
-let score = 0
-let questionCounter = 0
-let availableQuestions = []
+let currentQuestion = {};
+let acceptingAnswers = true;
+let score = 0;
+let questionCounter = 0;
+let availableQuestions = [];
 
 let questions = [{
-        question: 'What is thWhen you go to the grocery shop, it’s best to:',
+        question: 'When you go to the grocery shop, it’s best to:',
         choice1: '..buy a disposable bag at the counter to carry your groceries home',
         choice2: '..bring your own reusable bag for your groceries every time',
         answer: 2,
@@ -29,7 +29,7 @@ let questions = [{
         answer: 1,
     },
     {
-        question: 'When you don’t play with your old toys, it’s best to::',
+        question: 'When you don’t play with your old toys, it’s best to:',
         choice1: '..to throw them away in the trash',
         choice2: '..to donate it to other children',
         answer: 2,
@@ -40,23 +40,23 @@ let questions = [{
         choice2: '..to keep the tap running while you soap your hands ',
         answer: 1,
     }
-]
+];
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 4
+const SCORE_POINTS = 100;
+const MAX_QUESTIONS = 5;
 
 startGame = () => {
-    questionCounter = 0
-    score = 0
-    availableQuestions = (...questions)
-    getNewQuestion()
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    getNewQuestion();
 }
 
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score)
+        localStorage.setItem('mostRecentScore', score);
 
-        return window.location.assign('/end.html')
+        return window.location.assign('/end.html');
     }
 
     questionCounter++
@@ -72,21 +72,21 @@ getNewQuestion = () => {
         choice.innerText = currentQuestion['choice' + number]
     })
 
-    acceptingAnswers = true
-}
+    acceptingAnswers = true;
+};
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return
 
-        acceptingAnswers = false
-        const selectedChoice = e.target
-        const selectedAnswer = selectedChoice.dataset['number']
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
         if (classToApply === 'correct') {
-            incrementScore(SCORE_POINTS)
+            incrementScore(SCORE_POINTS);
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
@@ -94,6 +94,13 @@ choices.forEach(choice => {
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
-        }, 1000)
-    })
-})
+        }, 1000);
+    });
+});
+
+incrementScore = num => {
+    score += num
+    scoreText.innerText = score
+}
+
+startGame()
