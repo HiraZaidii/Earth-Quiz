@@ -112,9 +112,10 @@ The webpage was designed to look calm and clear in shades of green.
 ### Colour
 For the colour scheme green tones were selected by coolers.co.
 
-Afterwards I used ColorSpace to select a matching pallete. To see what contrast matches best I used Eightshapes.
+Afterwards I used ColorSpace to select a matching pallete. To see what contrast matches best I used Eightshapes to see what text color will match.
 
-![contrast](https://user-images.githubusercontent.com/98779723/159938189-da8435f1-b2ad-4150-b7f5-dba48ae9a5ba.PNG)
+![8shapes](https://user-images.githubusercontent.com/98779723/167148345-2fe149d5-ba6d-4835-a6e9-c95627ad6eca.PNG)
+
 
 ### Fonts
 Raleway was imported from google fonts.
