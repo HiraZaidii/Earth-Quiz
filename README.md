@@ -110,9 +110,7 @@ Returning players (returning-user)
 The webpage was designed to look calm and clear in shades of green. 
 
 ### Colour
-For the colour scheme green tones were by contracting colors from the images using AdobeColor. 
-
-![contrast](https://user-images.githubusercontent.com/98779723/159938189-da8435f1-b2ad-4150-b7f5-dba48ae9a5ba.PNG)
+For the colour scheme green tones were selected by coolers.co.
 
 Afterwards I used ColorSpace to select a matching pallete. To see what contrast matches best I used Eightshapes.
 
