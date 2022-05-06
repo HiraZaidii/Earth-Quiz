@@ -212,3 +212,32 @@ footer {
     background: #89B376;
     width: 0%;
 }
+
+/* style for end.html */
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 #fff;
+}
+
+input::placeholder {
+    color: slategray;
+
+}
+
+#username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
