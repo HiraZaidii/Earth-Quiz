@@ -76,7 +76,7 @@ getNewQuestion = () => {
 };
 
 choices.forEach(choice => {
-    choice.addEventListener('click', d => {
+    choice.addEventListener('click', e => {
         if (!acceptingAnswers) return
 
         acceptingAnswers = false;
@@ -110,7 +110,7 @@ startGame()
 const username = document.querySelector('#username');
 const saveScoreBtn = document.querySelector('#saveScoreBtn');
 const finalScore = document.querySelector('#finalScore');
-const mostRecentScore = document.querySelector('#mostRecentScore');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 const MAX_HIGH_SCORES = 4;
@@ -121,7 +121,7 @@ username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value
 });
 
-saveHighScore = d => {
+saveHighScore = e => {
     d.preventdefault()
 
     const score = {
@@ -140,3 +140,12 @@ saveHighScore = d => {
     localStorage.setItem('highScores', Json.stringify(highScores))
     window.location.assign('/')
 }
+
+/* below is the JS for the highscores.html page */
+const highScoresList = document.querySelector('#highScoresList');
+const highScores = JSON.parse(localStorage.getItem('highScores')) || []
+
+highScoresList.innerHTML =
+    highScores.map(score => {
+        return `<li class="high-score">$(score.name) - ${score.score}` < /li>
+    }).join('')
