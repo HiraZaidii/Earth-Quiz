@@ -11,31 +11,31 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 let questions = [{
-        question: 'When you go to the grocery shop, it’s best to:',
+        question: 'When you go to the grocery shop, it’s best to..',
         choice1: '..buy a disposable bag at the counter to carry your groceries home',
         choice2: '..bring your own reusable bag for your groceries every time',
         answer: 2,
     },
     {
-        question: 'When you are out for a walk and get thirsty, it’s best to:',
+        question: 'When you are out for a walk and get thirsty, it’s best to..',
         choice1: '..bring your own reusable water bottle with you so you can drink',
         choice2: '..buy a plastic water bottle from the store',
         answer: 1,
     },
     {
-        question: 'When you are throwing away your paper drawings, it’s best to:',
+        question: 'When you are throwing away your paper drawings, it’s best to..',
         choice1: '..throw it away separately in the paperbox',
         choice2: '..throw it any nearest trash bin',
         answer: 1,
     },
     {
-        question: 'When you don’t play with your old toys, it’s best to:',
+        question: 'When you don’t play with your old toys, it’s best to..',
         choice1: '..to throw them away in the trash',
         choice2: '..to donate it to other children',
         answer: 2,
     },
     {
-        question: 'When you wash your hands, it’s best to:',
+        question: 'When you wash your hands, it’s best to..',
         choice1: '..to close the tap while soaping your hands',
         choice2: '..to keep the tap running while you soap your hands ',
         answer: 1,
@@ -43,7 +43,7 @@ let questions = [{
 ];
 
 const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 4;
+const MAX_QUESTIONS = 5;
 
 startGame = () => {
     questionCounter = 0;
@@ -113,7 +113,7 @@ const finalScore = document.querySelector('#finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-const MAX_HIGH_SCORES = 4;
+const MAX_HIGH_SCORES = 5;
 
 finalScore.innerText = mostRecentScore;
 
@@ -143,9 +143,9 @@ saveHighScore = e => {
 
 /* below is the JS for the highscores.html page */
 const highScoresList = document.querySelector('#highScoresList');
-const highScores = JSON.parse(localStorage.getItem('highScores')) || []
+const highScore = JSON.parse(localStorage.getItem('highScores')) || []
 
 highScoresList.innerHTML =
     highScores.map(score => {
-        return `<li class="high-score">$(score.name) - ${score.score}` < /li>
+        return `<li class="high-score">$(score.name) - ${score.score}< /li>`
     }).join('')
