@@ -76,7 +76,7 @@ getNewQuestion = () => {
 };
 
 choices.forEach(choice => {
-    choice.addEventListener('click', e => {
+    choice.addEventListener('click', d => {
         if (!acceptingAnswers) return
 
         acceptingAnswers = false;
@@ -104,3 +104,39 @@ incrementScore = num => {
 }
 
 startGame()
+
+
+/* below is the JS for the end.html page */
+const username = document.querySelector('#username');
+const saveScoreBtn = document.querySelector('#saveScoreBtn');
+const finalScore = document.querySelector('#finalScore');
+const mostRecentScore = document.querySelector('#mostRecentScore');
+
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+const MAX_HIGH_SCORES = 4;
+
+finalScore.innerText = mostRecentScore;
+
+username.addEventListener('keyup', () => {
+    saveScoreBtn.disabled = !username.value
+});
+
+saveHighScore = d => {
+    d.preventdefault()
+
+    const score = {
+        score: mostRecentScore,
+        name: username.value
+    }
+
+    highScores.push(score)
+
+    highScores.sort((a, b) => {
+        return b.score - a.score
+
+    })
+
+    highScores.splice(4)
+    localStorage.setItem('highScores', Json.stringify(highScores))
+    window.location.assign('/')
+}

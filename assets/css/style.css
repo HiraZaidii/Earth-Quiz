@@ -143,7 +143,6 @@ footer {
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
-    background: #E8CD77;
     font-size: 6rem;
 }
 
@@ -240,4 +239,12 @@ input::placeholder {
     margin-bottom: 3rem;
     width: 100%;
     outline: none;
+}
+
+#saveScoreBtn {
+    color: black;
+}
+
+#end-text {
+    text-align: center;
 }
