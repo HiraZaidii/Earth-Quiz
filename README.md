@@ -127,3 +127,87 @@ The website consists of 4 separate pages:
 - A quiz page where you can play the game
 - An end page where you can play again or save you score/name 
 - A page with the highscores and names 
+
+### Wireframes
+
+<details><summary>Home</summary>
+
+
+![home](https://user-images.githubusercontent.com/98779723/167253301-0570bf70-36fc-4b7d-810c-cb21952c2759.png)
+
+</details>
+<details><summary>Quiz</summary>
+
+![game](https://user-images.githubusercontent.com/98779723/167253319-25e1c1ee-a8e4-4386-a875-725875d06d5c.png)
+
+
+</details>
+
+<details><summary>End</summary>
+![end](https://user-images.githubusercontent.com/98779723/167253325-2436844d-90eb-4b3a-a508-3e779e41e4d1.png)
+
+
+    </details>
+
+<details><summary>Highscores Us</summary>
+![highscore](https://user-images.githubusercontent.com/98779723/167253311-0ca4f2a0-a495-4e66-9983-bd98f3762bba.png)
+
+
+</details>
+
+## Technologies Used
+
+### Languages
+- HTML
+- CSS
+- Javascript
+
+### Frameworks & Tools
+
+- Git
+- GitHub
+- Gitpod
+- Tinypng
+- EighShapes
+- Balsamiq
+- Google Fonts
+- Adobe Color
+- Font Awsome
+- Favicon
+
+## Features
+The quiz consists of 4 pages and 12 features
+
+### Homepage
+- A button to play the game that leads to the game.html page
+
+- A button to view the highscores that leads to highscores.html
+
+- User stories 1, 2, 6, 7, 
+
+
+### Quiz page
+- Question counter
+
+- Score counter
+
+- Question area
+- Multiple choice answer
+- User stories 4, 5, 8, 9
+
+
+### End page
+- Total score
+- Insert name and save score option
+- Play again button
+- Button to return home
+- User stories 6, 7
+
+### Highscores page
+- Leaderboard
+- Return to home button
+
+###  Footer
+- Visible on each page with clickable links to social media channels that open in separate window
+- User stories 3, 10
+
