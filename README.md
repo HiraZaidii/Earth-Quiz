@@ -142,17 +142,21 @@ The website consists of 4 separate pages:
 
 
 </details>
-
 <details><summary>End</summary>
-![end](https://user-images.githubusercontent.com/98779723/167253391-b01e09b0-c6e8-4eca-80af-1fff2c9e9e3c.png)
 
-    </details>
+![end](https://user-images.githubusercontent.com/98779723/167253444-7c9166a3-7e3d-4cfb-8552-a0690ec8093a.png)
 
-<details><summary>Highscores </summary>
-![highscore](https://user-images.githubusercontent.com/98779723/167253390-c52ae97b-7711-4b49-8442-8eb5b08d8b94.png)
 
 
 </details>
+<details><summary>Highscores</summary>
+
+![highscore](https://user-images.githubusercontent.com/98779723/167253447-7907bb19-c9cb-4ea9-b810-9b194e913142.png)
+
+
+
+</details>
+
 
 
 ## Technologies Used
