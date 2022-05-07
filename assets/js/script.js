@@ -23,12 +23,6 @@ let questions = [{
         answer: 1,
     },
     {
-        question: 'When you are throwing away your paper drawings, it’s best to..',
-        choice1: '..throw it away separately in the paperbox',
-        choice2: '..throw it any nearest trash bin',
-        answer: 1,
-    },
-    {
         question: 'When you don’t play with your old toys, it’s best to..',
         choice1: '..to throw them away in the trash',
         choice2: '..to donate it to other children',
@@ -38,6 +32,12 @@ let questions = [{
         question: 'When you wash your hands, it’s best to..',
         choice1: '..to close the tap while soaping your hands',
         choice2: '..to keep the tap running while you soap your hands ',
+        answer: 1,
+    },
+    {
+        question: 'When you are throwing away your paper drawings, it’s best to..',
+        choice1: '..throw it away separately in the paperbox',
+        choice2: '..throw it any nearest trash bin',
         answer: 1,
     }
 ];
@@ -61,7 +61,7 @@ getNewQuestion = () => {
 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    progressBarfull.getElementsByClassName.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
+    progressBarfull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
@@ -71,6 +71,8 @@ getNewQuestion = () => {
         const number = choice.dataset['number']
         choice.innerText = currentQuestion['choice' + number]
     })
+
+    availableQuestions.splice(questionsIndex, 1);
 
     acceptingAnswers = true;
 };
