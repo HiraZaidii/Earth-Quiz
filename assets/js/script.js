@@ -131,23 +131,23 @@ saveHighScore = e => {
         name: username.value
     }
 
-    highScores.push(score)
+    highScores.push(score);
 
     highScores.sort((a, b) => {
         return b.score - a.score
 
-    })
+    });
 
-    highScores.splice(4)
-    localStorage.setItem('highScores', Json.stringify(highScores))
-    window.location.assign('/')
+    highScores.splice(5)
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+    window.location.assign('../end.html');
 }
 
 /* below is the JS for the highscores.html page */
 const highScoresList = document.querySelector('#highScoresList');
-const highScore = JSON.parse(localStorage.getItem('highScores')) || []
+const highScore = JSON.parse(localStorage.getItem("highscores")) || []
 
 highScoresList.innerHTML =
     highScores.map(score => {
         return `<li class="high-score">$(score.name) - ${score.score}< /li>`
-    }).join('')
+    }).join("")
