@@ -5,11 +5,11 @@ const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
-let currentQuestion = {};
-let acceptingAnswers = true;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
+let currentQuestion = {}
+let acceptingAnswers = true
+let score = 0
+let questionCounter = 0
+let availableQuestions = []
 
 let questions = [{
         question: 'When you go to the grocery shop, it’s best to..',
@@ -43,29 +43,29 @@ let questions = [{
     }
 ];
 
-const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 5;
+const SCORE_POINTS = 100
+const MAX_QUESTIONS = 5
 
 startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
     getNewQuestion()
-};
+}
 
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('/end.html')
-    };
+    }
 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
-    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionsIndex];
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+    currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
 
     choices.forEach(choice => {
@@ -73,23 +73,23 @@ getNewQuestion = () => {
         choice.innerText = currentQuestion['choice' + number]
     })
 
-    availableQuestions.splice(questionsIndex, 1);
+    availableQuestions.splice(questionsIndex, 1)
 
-    acceptingAnswers = true;
-};
+    acceptingAnswers = true
+}
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return
 
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
+        acceptingAnswers = false
+        const selectedChoice = e.target
+        const selectedAnswer = selectedChoice.dataset['number']
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
         if (classToApply === 'correct') {
-            incrementScore(SCORE_POINTS);
+            incrementScore(SCORE_POINTS)
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
@@ -97,56 +97,14 @@ choices.forEach(choice => {
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
-        }, 1000);
-    });
-});
+
+        }, 1000)
+    })
+})
 
 incrementScore = num => {
     score += num
     scoreText.innerText = score
 }
 
-startGame();
-/* below is the JS for the end.html page */
-const username = document.querySelector('#username');
-const saveScoreBtn = document.querySelector('#saveScoreBtn');
-const finalScore = document.querySelector('#finalScore');
-const mostRecentScore = localStorage.getItem('mostRecentScore');
-
-const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-const MAX_HIGH_SCORES = 5;
-
-finalScore.innerText = mostRecentScore;
-
-username.addEventListener('keyup', () => {
-    saveScoreBtn.disabled = !username.value
-});
-
-saveHighScores = e => {
-    e.preventDefault()
-
-    const score = {
-        score: mostRecentScore,
-        name: username.value
-    }
-
-    highScores.push(score);
-
-    highScores.sort((a, b) => {
-        return b.score - a.score
-
-    });
-
-    highScores.splice(5)
-
-    localStorage.setItem('highScores', JSON.stringify(highScore));
-    window.location.assign('/highscores.html');
-}
-/* below is the JS for the highscores.html page */
-const highScoreList = document.querySelector('#highScoreList')
-const highScore = JSON.parse(localStorage.getItem("highScore")) || []
-
-highScoreList.innerHTML =
-    highScore.map(score => {
-        return `<li class="high-score">${score.name} - ${score.score}</li>`
-    }).join("")
+startGame()
