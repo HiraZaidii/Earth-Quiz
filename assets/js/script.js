@@ -1,11 +1,9 @@
-/* below js is made by the help of Brian Design Youtube tutorial, please check READ.me for link */
-
 /* below is js for game.html */
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
-const progressBarfull = document.querySelector('#progressBarfull');
+const progressBarFull = document.querySelector('#progressBarFull');
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -64,7 +62,7 @@ getNewQuestion = () => {
 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    progressBarfull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
@@ -109,8 +107,6 @@ incrementScore = num => {
 }
 
 startGame();
-
-
 /* below is the JS for the end.html page */
 const username = document.querySelector('#username');
 const saveScoreBtn = document.querySelector('#saveScoreBtn');
@@ -146,12 +142,11 @@ saveHighScores = e => {
     localStorage.setItem('highScores', JSON.stringify(highScore));
     window.location.assign('/highscores.html');
 }
-
 /* below is the JS for the highscores.html page */
-const highScoresList = document.querySelector('#highScoresList')
+const highScoreList = document.querySelector('#highScoreList')
 const highScore = JSON.parse(localStorage.getItem("highScore")) || []
 
-highScoresList.innerHTML =
-    highScores.map(score => {
+highScoreList.innerHTML =
+    highScore.map(score => {
         return `<li class="high-score">${score.name} - ${score.score}</li>`
     }).join("")
