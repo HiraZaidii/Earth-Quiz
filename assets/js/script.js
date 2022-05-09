@@ -108,7 +108,7 @@ incrementScore = num => {
     scoreText.innerText = score
 }
 
-startGame()
+startGame();
 
 
 /* below is the JS for the end.html page */
@@ -149,7 +149,7 @@ saveHighScores = e => {
 
 /* below is the JS for the highscores.html page */
 const highScoresList = document.querySelector('#highScoresList')
-const highScores = JSON.parse(localStorage.getItem("highScores")) || []
+const highScore = JSON.parse(localStorage.getItem("highScore")) || []
 
 highScoresList.innerHTML =
     highScores.map(score => {
