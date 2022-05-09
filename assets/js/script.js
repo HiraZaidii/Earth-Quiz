@@ -1,6 +1,9 @@
+/* below js is made by the help of Brian Design Youtube tutorial, please check READ.me for link */
+
+/* below is js for game.html */
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
-const ProgressText = document.querySelector('#progressText');
+const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarfull = document.querySelector('#progressBarfull');
 
@@ -35,7 +38,7 @@ let questions = [{
         answer: 1,
     },
     {
-        question: 'When you are throwing away your paper drawings, it’s best to..',
+        question: 'When you are throwing away your paper, it’s best to..',
         choice1: '..throw it away separately in the paperbox',
         choice2: '..throw it any nearest trash bin',
         answer: 1,
@@ -46,25 +49,25 @@ const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 5;
 
 startGame = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    getNewQuestion();
-}
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    getNewQuestion()
+};
 
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score);
+        localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/end.html');
-    }
+        return window.location.assign('/end.html')
+    };
 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarfull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
-    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-    currentQuestion = availableQuestions[questionsIndex]
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionsIndex];
     question.innerText = currentQuestion.question
 
     choices.forEach(choice => {
@@ -123,8 +126,8 @@ username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value
 });
 
-saveHighScore = e => {
-    d.preventdefault()
+saveHighScores = e => {
+    e.preventDefault()
 
     const score = {
         score: mostRecentScore,
@@ -139,15 +142,16 @@ saveHighScore = e => {
     });
 
     highScores.splice(5)
-    localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('../end.html');
+
+    localStorage.setItem('highScores', JSON.stringify(highScore));
+    window.location.assign('/highscores.html');
 }
 
 /* below is the JS for the highscores.html page */
-const highScoresList = document.querySelector('#highScoresList');
-const highScore = JSON.parse(localStorage.getItem("highscores")) || []
+const highScoresList = document.querySelector('#highScoresList')
+const highScores = JSON.parse(localStorage.getItem("highScores")) || []
 
 highScoresList.innerHTML =
     highScores.map(score => {
-        return `<li class="high-score">$(score.name) - ${score.score}< /li>`
+        return `<li class="high-score">${score.name} - ${score.score}</li>`
     }).join("")
