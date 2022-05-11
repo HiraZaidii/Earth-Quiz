@@ -285,6 +285,11 @@ input::placeholder {
 }
 
 @media screen and (min-width:390px) and (max-width: 420px) {
+    .container {
+        font-size: 7rem;
+        padding: 0;
+        margin: 0;
+    }
 
     h1 {
         font-size: 80%;
@@ -314,27 +319,33 @@ input::placeholder {
 
 
 /* for devices such as iphone 5*/
-@media screen and (min-width: 320px) and (max-width: 390px) {
+@media screen and (max-width: 320px) {
+    .container {
+        font-size: 7rem;
+        padding: 0;
+        margin: 0;
+    }
 
     h1 {
-        font-size: 75%;
+        font-size: 85%;
     }
 
     .game-container {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 3rem;
 
     }
 
     .hud-prefix {
         text-align: center;
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .hud-main-text {
         text-align: center;
-        font-size: 4rem;
+        font-size: 2rem;
     }
 
     #progressBar {
@@ -353,7 +364,7 @@ input::placeholder {
     }
 
     .choice-text {
-        padding: 0;
+        padding: 1;
         width: 100%;
         font-size: 75%;
     }
