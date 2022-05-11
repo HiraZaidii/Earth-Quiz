@@ -286,7 +286,6 @@ input::placeholder {
 
 @media screen and (min-width:390px) and (max-width: 420px) {
 
-    #home,
     h1 {
         font-size: 80%;
     }
@@ -317,7 +316,6 @@ input::placeholder {
 /* for devices such as iphone 5*/
 @media screen and (min-width: 320px) and (max-width: 390px) {
 
-    #home,
     h1 {
         font-size: 75%;
     }

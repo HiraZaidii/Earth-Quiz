@@ -1,10 +1,10 @@
 # Kids Earth quiz
 (Developer: Hira Zaidi)
 
-![Mock up image]()
+![Mock up image]
 
 
-[Live webpage]()
+[Live webpage](https://hirazaidii.github.io/Earth-Quiz/)
 
 ## Table of Content
 
@@ -39,7 +39,8 @@
 11. [Acknowledgements](#acknowledgements)
 
 ## Project Goals 
-
+I have made this quiz as a fun way for kids to test their knowledge of the best practices we can have to keep the Earth a bit cleaner. 
+These are simple yet powerfull ways to create a sustainable environment.
 
 ### User Goals
 •	Test (your kids) knowledge of how to keep the Earth at it's best
@@ -184,20 +185,24 @@ The quiz consists of 4 pages and 12 features
 
 ### Homepage
 - A button to play the game that leads to the game.html page
-
 - A button to view the highscores that leads to highscores.html
-
 - User stories 1, 2, 6, 7, 
+<details><summary>Screenshots</summary>
+<img src="docs/homepage.PNG">
+</details>
+
 
 
 ### Quiz page
 - Question counter
-
 - Score counter
-
 - Question area
 - Multiple choice answer
 - User stories 4, 5, 8, 9
+<details><summary>Screenshots</summary>
+<img src="docs/gamepage.PNG">
+</details>
+
 
 
 ### End page
@@ -206,12 +211,130 @@ The quiz consists of 4 pages and 12 features
 - Play again button
 - Button to return home
 - User stories 6, 7
+<details><summary>Screenshots</summary>
+<img src="docs/endpage.PNG">
+</details>
+
 
 ### Highscores page
 - Leaderboard
 - Return to home button
+<details><summary>Screenshots</summary>
+<img src="docs/highscor[age.PNG">
 
+
+</details>
 ###  Footer
 - Visible on each page with clickable links to social media channels that open in separate window
 - User stories 3, 10
+<details><summary>Screenshots</summary>
+<img src="docs/footer.PNG">
+</details>
 
+
+
+## Validation
+
+### HTML Validation
+The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors no warnings to show.
+<details><summary>Home</summary>
+<img src="docs/htmlhome.PNG">
+</details>
+<details><summary>Quiz</summary>
+<img src="docs/htmlquiz.PNG">
+</details>
+<details><summary>End</summary>
+<img src="docs/htmlend.PNG">
+</details>
+<details><summary>Highscores</summary>
+<img src="docs/htmlhighscores.PNG">
+</details>
+
+### CSS Validation
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website.
+<details><summary>style.css</summary>
+<img src="docs/cssval.PNG">
+</details>
+
+### Accessibility
+The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. All pages pass with 0 errors.
+<details><summary>Home</summary>
+<img src="docs/waveindex.PNG">
+</details>
+<details><summary>Quiz</summary>
+<img src="docs/wavequiz.PNG">
+</details>
+<details><summary>End</summary>
+<img src="docs/waveend.PNG">
+</details>
+<details><summary>Highscores</summary>
+<img src="docs/wavehighscores.PNG">
+</details>
+
+### Performance 
+Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website. 
+
+<details><summary>Home</summary>
+<img src="docs/lhhome.PNG">
+</details>
+<details><summary>Game</summary>
+<img src="docs/lhgame.PNG">
+</details>
+<details><summary>End</summary>
+<img src="docs/lhend.PNG">
+</details>
+<details><summary>Highscores</summary>
+<img src="docs/lhhighscores.PNG">
+</details>
+
+### Performing tests on various devices 
+The website was tested on the following devices:
+- Iphone 12 pro max
+- Iphone 13 pro max
+
+In addition, the website was tested using Google Chrome Developer Tools Device Toggeling option for all available device options.
+
+### Browser compatability
+The website was tested on the following browsers:
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+
+## Deployment
+The website was deployed using GitHub Pages by following these steps:
+1. In the GitHub repository navigate to the Settings tab
+2. On the left hand menu select Pages
+3. For the source select Branch: main
+4. After the webpage refreshes automaticaly you will se a ribbon on the top saying:  Your site is published at https://hirazaidii.github.io/Earth-Quiz/
+
+You can for fork the repository by following these steps:
+1. Go to the GitHub repository
+2. Click on Fork button in upper right hand corner
+
+You can clone the repository by following these steps:
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefere to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7.Press Enter to create your local clone.
+
+## Credits
+
+### Code
+- Code Institute Slack Community
+- LMS Love Running project
+- LMS Coders Coffeehouse project
+- My own Stress Escape project
+- Brian Design youtube tutorials
+- Dani Krossing youtube tutorials
+
+### Media
+- Font Awesome
+
+## Acknowledgements
+I would like to take the opportunity to thank:
+- My husband Shahbaz for his support through out my stress moments.
+- My mentor Mo Shami for his feedback, advice, guidance and support.
+- The Code Institute slack community of students and alumni for their helpful advice, resources, guidance and support.
