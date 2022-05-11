@@ -8,13 +8,13 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 const MAX_HIGH_SCORES = 5;
 
 finalScore.innerText = mostRecentScore;
-
+/* will re-enable the save button */
 username.addEventListener('keyup', () => {
-    saveScoreBtn.disabled = !username.value
+    saveScoreBtn.disabled = !username.value;
 });
-
+/* will allow us to click the button after a user name is inserted */
 saveHighScore = e => {
-    e.preventDefault()
+    e.preventDefault();
 
     const score = {
         score: mostRecentScore,
@@ -28,8 +28,8 @@ saveHighScore = e => {
 
     });
 
-    highScores.splice(5)
-
+    highScores.splice(5);
+    /* will save the highscores and show them on the leaderboard */
     localStorage.setItem('highScores', JSON.stringify(highScores));
     window.location.assign('highscores.html');
-}
+};

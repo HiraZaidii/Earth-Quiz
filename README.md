@@ -28,11 +28,12 @@ Developed by Hira Zaidi
 6. [Testing](#validation)
     1. [HTML Validation](#HTML-validation)
     2. [CSS Validation](#CSS-validation)
-    3. [Accessibility](#accessibility)
-    4. [Performance](#performance)
-    5. [Device testing](#performing-tests-on-various-devices)
-    6. [Browser compatibility](#browser-compatability)
-    7. [Testing user stories](#testing-user-stories)
+    3. [JS Validation](#JS-validation)
+    4. [Accessibility](#accessibility)
+    5. [Performance](#performance)
+    6. [Device testing](#performing-tests-on-various-devices)
+    7. [Browser compatibility](#browser-compatability)
+    8. [Testing user stories](#testing-user-stories)
 8. [Bugs](#Bugs)
 9. [Deployment](#deployment)
 10. [Credits](#credits)
@@ -41,6 +42,8 @@ Developed by Hira Zaidi
 ## Project Goals 
 I have made this quiz as a fun way for kids to test their knowledge of the best practices we can have to keep the Earth a bit cleaner. 
 These are simple yet powerfull ways to create a sustainable environment.
+
+The quiz is responsive all the buttons and footer icons take you to the relative page. The quiz is interactive as while you play you can see the progressbar increase on the game page. You get notified when an answer is right or wrong by the change of the background color once you submit your answer. In the end page you can submit a username.
 
 ### User Goals
 •	Test (your kids) knowledge of how to keep the Earth at it's best
@@ -93,8 +96,8 @@ Returning players (returning-user)
 #### Returning User
 6. As a returning user, I want to see the highscores
 7. As a returning user, I want to be able to play again
-8. As a first time user, I want to see what question I am on during play
-9. As a first time user, I want to know my score during the game
+8. As returning user, I want to see what question I am on during play
+9. As a returning user, I want to know my score during the game
 10. As a returning user, I want to find the social media pages
 
 
@@ -102,8 +105,8 @@ Returning players (returning-user)
 11. As the site owner, I want users to be see the leaderbord
 12. As the site owner, I want users to be able to save their score/name
 13. As the site owner, I want the users to be able to play the quiz
-14. As the site owner, I want the users to be able to play again at the end
-14. As the site owner, I want the users to see the social media pages
+14. As the site owner, I want the users to be able to return to the game in case of 404 error
+15. As the site owner, I want the users to see the social media pages
 
 ## Design
 
@@ -250,6 +253,18 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <img src="docs/htmlhighscores.PNG">
 </details>
 
+### JS Validation
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website.
+<details><summary>script.js</summary>
+<img src="docs/jsgame.PNG">
+</details>
+<details><summary>game.js</summary>
+<img src="docs/jsend.PNG">
+</details>
+<details><summary>highscores.js</summary>
+<img src="docs/jshigh.PNG">
+</details>
+
 ### CSS Validation
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website.
 <details><summary>style.css</summary>
@@ -299,6 +314,164 @@ The website was tested on the following browsers:
 - Google Chrome
 - Mozilla Firefox
 - Microsoft Edge
+
+### Testing User stories
+
+1. As a first time user, I want to play the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Main page  | Click the play button| starts the quiz | Works as expected |
+| End page  | Click the play again button| re-starts the quiz | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/homepage.PNG">
+</details>
+
+2. As a first time user, I want to see the highscores
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Button on main page  | Click on button | Opens highscores page| Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/homepage.PNG">
+</details>
+
+3. As a first time user, I want to be able to access social media links
+
+ **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer  | Scroll down on any page | Click on social media links | Works as expected | 
+
+<details><summary>Screenshots</summary>
+<img src="footer.PNG">
+</details>
+
+4. As a first time user, I want to see what question I am on during play
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game page progressbar | Answer question | Questioncounter and progressbar increase| Works as expected ||
+
+<details><summary>Screenshots</summary>
+<img src="docs/gamepage.PNG">
+</details>
+
+5. As a first time user, I want to know my score during the game
+
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game page score counter on the right | Answer question | Increase of score when correct | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/gamepage.PNG">
+</details>
+
+6. As a returning user, I want to see the highscores
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Button on main page  | Click on button | Opens highscores page| Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/homepage.PNG">
+</details>
+
+7. As a returning user, I want to be able to play again
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Main page  | Click the play button| starts the quiz | Works as expected |
+| End page  | Click the play again button| re-starts the quiz | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/homepage.PNG">
+<img src="docs/endpage.PNG">
+</details>
+
+8. As a returning user, I want to see what question I am on during play
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game page progressbar | Answer question | Questioncounter and progressbar increase| Works as expected ||
+
+<details><summary>Screenshots</summary>
+<img src="docs/gamepage.PNG">
+</details>
+
+9. As a returning user, I want to know my score during the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game page score counter on the right | Answer question | Increase of score when correct | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/gamepage.PNG">
+</details>
+
+10. As a returning user, I want to find the social media pages
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer  | Scroll down on any page | Click on social media links | Works as expected | 
+
+<details><summary>Screenshots</summary>
+<img src="footer.PNG">
+</details>
+
+11. As the site owner, I want users to be see the leaderbord
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Button on main page  | Click on button | Opens highscores page| Works as expected |
+
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/homepage.PNG">
+</details>
+
+12. As the site owner, I want users to be able to save their score/name
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| End page | Insert name press save | Saves score and username on the Leaderboard | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/endpage.PNG">
+</details>
+
+13. As the site owner, I want the users to be able to play the quiz
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Main page  | Click the play button| starts the quiz | Works as expected |
+
+
+<details><summary>Screenshots</summary>
+<img src="docs/homepage.PNG">
+</details>
+
+14. As the site owner, I want the users to be able to return to the game in case of 404 error
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Error page 404| check 404.html| See error page with game terun button | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/404.PNG">
+</details>
+
+15. As the site owner, I want the users to see the social media pages
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer on every page | click on icon | opens on social media page | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/footer.PNG">
+</details>
 
 ## Deployment
 The website was deployed using GitHub Pages by following these steps:
