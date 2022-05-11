@@ -267,14 +267,12 @@ input::placeholder {
         margin-bottom: 7rem;
     }
 
-
-
     .hud-prefix {
         font-size: 3.5rem;
     }
 
     #progressBar {
-        width: 10rem;
+        width: 30rem;
     }
 }
 
@@ -291,7 +289,7 @@ input::placeholder {
 
     .hud-prefix {
         text-align: center;
-        font-size: 2rem;
+        font-size: 4rem;
     }
 
     .hud-main-text {
