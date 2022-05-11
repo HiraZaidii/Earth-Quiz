@@ -1,7 +1,7 @@
 # Kids Earth quiz
-(Developer: Hira Zaidi)
+Developed by Hira Zaidi
 
-<img src="docs/mockup.PNG">
+<img src="docs/mock2.PNG">
 
 
 [Live webpage](https://hirazaidii.github.io/Earth-Quiz/)
