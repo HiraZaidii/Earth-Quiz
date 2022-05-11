@@ -280,14 +280,31 @@ input::placeholder {
     }
 
     #progressBar {
-        width: 30rem;
+        width: 10rem;
     }
 }
 
+@media screen and (min-width:390px) and (max-width: 420px) {
+
+    h1 {
+        font-size: 80%;
+    }
+
+    .hud-prefix {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .hud-main-text {
+        text-align: center;
+        font-size: 4rem;
+    }
+
+}
 
 
 /* for devices such as iphone 5*/
-@media (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 390px) {
 
     h1 {
         font-size: 75%;
@@ -298,22 +315,37 @@ input::placeholder {
         justify-content: center;
         align-items: center;
 
+    }
 
+    .hud-prefix {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .hud-main-text {
+        text-align: center;
+        font-size: 4rem;
     }
 
     #progressBar {
-        width: 6rem;
-        height: 2rem;
+        width: 15rem;
+        height: 3rem;
         border: 0.2rem solid #89B376;
-        margin-top: 1rem;
+        margin-top: 2rem;
         border-radius: 50px;
         overflow: hidden;
+    }
+
+    #progressBarFull {
+        height: 100%;
+        background: #89B376;
+        width: 0%;
     }
 
     .choice-text {
         padding: 0;
         width: 100%;
-        font-size: 60%;
+        font-size: 75%;
     }
 
     .choice-prefix {
