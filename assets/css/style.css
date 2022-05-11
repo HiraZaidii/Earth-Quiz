@@ -258,6 +258,29 @@ input::placeholder {
 }
 
 /* adjusted css for diff screen size */
+@media screen and (max-width: 1024px) {
+    .choice-container {
+        min-width: 50rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    .game-container {
+        margin-bottom: 8rem;
+    }
+
+    .hud-prefix {
+        font-size: 3rem;
+    }
+
+    #progressBar {
+        width: 40rem;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
     .choice-container {
         min-width: 40rem;
@@ -287,26 +310,42 @@ input::placeholder {
         font-size: 80%;
     }
 
+    .game-container {
+        font-size: 5rem;
+    }
+
     .hud-prefix {
         text-align: center;
-        font-size: 4rem;
+        font-size: 2rem;
+        padding: 1rem;
+        margin-left: 2rem;
     }
 
     .hud-main-text {
         text-align: center;
-        font-size: 4rem;
+        font-size: 2rem;
+        padding: 1rem;
     }
 
     .choice-text {
         padding: 0;
         width: 100%;
-        font-size: 80%;
+        font-size: 2rem;
     }
 
     .choice-prefix {
-        padding: 0;
+        padding: 1rem;
     }
 
+    #progressBar {
+        width: 15rem;
+        height: 3rem;
+        border: 0.2rem solid #89B376;
+        margin-top: 2rem;
+        border-radius: 50px;
+        overflow: hidden;
+        margin-left: 2rem;
+    }
 }
 
 /* for devices such as iphone 5*/
