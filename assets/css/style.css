@@ -207,7 +207,7 @@ footer {
     overflow: hidden;
 }
 
-#progressBarfull {
+#progressBarFull {
     height: 100%;
     background: #89B376;
     width: 0%;
@@ -267,6 +267,20 @@ input::placeholder {
 @media screen and (max-width: 768px) {
     .choice-container {
         min-width: 40rem;
+    }
+
+    .game-container {
+        margin-bottom: 7rem;
+    }
+
+
+
+    .hud-prefix {
+        font-size: 3.5rem;
+    }
+
+    #progressBar {
+        width: 30rem;
     }
 }
 
