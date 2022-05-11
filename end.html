@@ -27,8 +27,9 @@
         <div id="end" class="flex-center flex-column">
             <h1 id="finalScore">0</h1>
             <form class="end-form-container">
-                <label for="username"></label>
-                <h2 id="end-text"> Enter your name below to save score: </h2>
+                <label for="username">
+                    <h2 id="end-text"> Enter your name below to save score: </h2>
+                </label>
                 <input type="text" name="name" id="username" placeholder="Please enter your name">
                 <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save
                     <i class="fa-solid fa-floppy-disk"></i></button>
