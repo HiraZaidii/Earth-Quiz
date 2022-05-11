@@ -300,6 +300,16 @@ input::placeholder {
         font-size: 4rem;
     }
 
+    .choice-text {
+        padding: 0;
+        width: 100%;
+        font-size: 80%;
+    }
+
+    .choice-prefix {
+        padding: 0;
+    }
+
 }
 
 
