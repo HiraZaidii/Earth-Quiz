@@ -320,20 +320,29 @@ input::placeholder {
     }
 
     h1 {
-        font-size: 75%;
+        font-size: 80%;
+    }
+
+    .choice-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        min-width: 25rem;
+
     }
 
     .game-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 3rem;
+        font-size: 5rem;
 
     }
 
     .hud-prefix {
         text-align: center;
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     .hud-main-text {
@@ -363,7 +372,8 @@ input::placeholder {
     }
 
     .choice-prefix {
-        padding: 0;
+        padding: 1;
+        font-size: 2rem;
     }
 
     /* end page */
