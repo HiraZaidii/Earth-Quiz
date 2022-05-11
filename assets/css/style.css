@@ -13,16 +13,12 @@ body {
 }
 
 /* below contains all the styling for the main html page */
-/*style for the header */
-
-/* style for the main section */
-
+/* style for the main section on index html*/
 h1 {
     font-size: 5.4rem;
     margin-bottom: 6rem;
     text-align: center;
 }
-
 
 h2 {
     font-size: 4.2rem;
@@ -121,7 +117,6 @@ footer {
 .social-networks>li {
     display: inline;
     text-align: center;
-
 }
 
 .social-networks i {
@@ -133,7 +128,6 @@ footer {
 }
 
 /* below is the styling for the game.html page */
-
 .game-container {
     width: 100vw;
     height: 100vh;
@@ -317,7 +311,6 @@ input::placeholder {
 
 }
 
-
 /* for devices such as iphone 5*/
 @media screen and (max-width: 320px) {
     .container {
@@ -379,7 +372,6 @@ input::placeholder {
         display: flex;
         flex-direction: column;
         align-items: center;
-
 
     }
 
