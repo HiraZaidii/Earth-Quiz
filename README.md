@@ -505,10 +505,10 @@ You can clone the repository by following these steps:
 <details><summary>Details</summary>
 in particulair: How to Make a Quiz App using HTML CSS Javascript link:https://www.youtube.com/watch?v=f4fB9Xg2JEY
 </details> 
-in particulair: How to Make a Quiz App using HTML CSS Javascript link:https://www.youtube.com/watch?v=f4fB9Xg2JEY
+
 
 ### Media
-- Font Awesome
+- Font Awesome Icon
 
 ## Acknowledgements
 I would like to take the opportunity to thank:
