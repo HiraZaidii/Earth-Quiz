@@ -421,12 +421,11 @@ The website was tested on the following browsers:
 <img src="footer.PNG">
 </details>
 
-11. As the site owner, I want users to be see the leaderbord
+11. As the site owner, I want users to be able see the leaderbord
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 | Button on main page  | Click on button | Opens highscores page| Works as expected |
-
 
 <details>
 <summary>Screenshots</summary>
@@ -434,6 +433,7 @@ The website was tested on the following browsers:
 </details>
 
 12. As the site owner, I want users to be able to save their score/name
+
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 | End page | Insert name press save | Saves score and username on the Leaderboard | Works as expected |
@@ -500,8 +500,12 @@ You can clone the repository by following these steps:
 - LMS Love Running project
 - LMS Coders Coffeehouse project
 - My own Stress Escape project
-- Brian Design youtube tutorials
 - Dani Krossing youtube tutorials
+- Brian Design Tutorials
+<details><summary>Details</summary>
+in particulair: How to Make a Quiz App using HTML CSS Javascript link:https://www.youtube.com/watch?v=f4fB9Xg2JEY
+</details> 
+in particulair: How to Make a Quiz App using HTML CSS Javascript link:https://www.youtube.com/watch?v=f4fB9Xg2JEY
 
 ### Media
 - Font Awesome
