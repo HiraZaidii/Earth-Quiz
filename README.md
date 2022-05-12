@@ -224,9 +224,8 @@ The quiz consists of 4 pages and 12 features
 - Return to home button
 <details><summary>Screenshots</summary>
 <img src="docs/highscor[age.PNG">
-
-
 </details>
+
 ###  Footer
 - Visible on each page with clickable links to social media channels that open in separate window
 - User stories 3, 10
